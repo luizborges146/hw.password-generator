@@ -15,8 +15,10 @@ generateBtn.addEventListener("click", writePassword);
 
 // --------------------------------------------------------Logic to generate the password ---------------------------------------------------------------------
 
+
+
 var number = false;
-var upperCase = false;
+var upperCase = true;
 var lowerCase = false;
 var symbol = false;
 
@@ -99,6 +101,6 @@ for(var i = 0; i<1; i++) {
   }
 }
 
-var pass = array.join('');
+//var pass = array.join('');
 
-console.log(pass);
+console.log(array);
