@@ -3,6 +3,7 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
+
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
@@ -13,14 +14,16 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-// --------------------------------------------------------Logic to generate the password ---------------------------------------------------------------------
-
-
-
+// --------------------------------------------------------Global Variables ---------------------------------------------------------------------
 var number = false;
 var upperCase = true;
 var lowerCase = false;
 var symbol = false;
+// --------------------------------------------------------get user information  ---------------------------------------------------------------------
+
+
+
+// --------------------------------------------------------Logic to generate the password ---------------------------------------------------------------------
 
 var lowerCaseLetters = "abcdefghijklmnopqrstuvwxyz";
 var upperCaseLetters ="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
