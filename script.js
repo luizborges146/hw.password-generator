@@ -13,6 +13,8 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+// --------------------------------------------------------Logic to generate the password ---------------------------------------------------------------------
+
 var number = false;
 var upperCase = false;
 var lowerCase = false;
@@ -96,3 +98,7 @@ for(var i = 0; i<1; i++) {
       break;
   }
 }
+
+var pass = array.join('');
+
+console.log(pass);
