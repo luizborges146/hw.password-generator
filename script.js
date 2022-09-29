@@ -160,9 +160,9 @@ function checkAllOptions (){// create a new function to check if the user will a
     symbol=== false) {
       alert("Hey, it seems that you did not select any criteria to generate your password!");
       var option = confirm("Press ok to start over or \ncancel, to leave the application!");
-      if (confirm === true) { // user press ok, it set the confirm to true, and the user will be able to start all over
+      if (option === true) { // user press ok, it set the confirm to true, and the user will be able to start all over
         userInput();
-      } else if (confirm === false) { // it will return to the main page
+      } else if (option === false) { // it will return to the main page
         return;
       }
 
