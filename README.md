@@ -3,7 +3,7 @@
 This project applies all the skills learned on week 2 of the Bootcamp, the focus is JavaScript and how to manipulate variables, functions and access user input from the web. 
 With that, I was able to create a user Password Generator, where the user can enter a number between 8 and 128, and add some criteria: NUMBERS, UPPERCASE, LOWERCASE and SYMBOLS. As mentioned the user will have the option to select only the criteria that apply to it. I also combine to this project, user responses, in case the user decide to go outside of the range, or add a number, or even live empty, so the user would receive a message for each information as an alert to inform that input is not acceptable, and it should add numbers instead. The user also has an option to cancel the program in case it does not want to generate a password.
 
-### Link to the password generator: ###[Luiz Borges Portifolio](https://luizborges146.github.io/hw.password-generator/)
+### Link to the password generator: [Password Generator](https://luizborges146.github.io/hw.password-generator/)
 
 ## Installation
 
