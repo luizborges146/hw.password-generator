@@ -4,7 +4,6 @@ var generateBtn = document.querySelector("#generate");
 // Write password to the #password input
 function writePassword() {
   userInput();// it calls the function to get user input
-  createRandomChar (); // it calls the function to generate the password, adding the user choices
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
@@ -24,8 +23,8 @@ var passSize = 0;
 // --------------------------------------------------------get user information  ---------------------------------------------------------------------
 function userInput() {
  
-  array = [];// create a local variable to fix the issue related to the password info be saved in the memory
-  arrayRandom=[];// create a local variable to clear it out the password, in case the user wants to try one more time
+  array = [];// set the global variable to empty array, to reset password info saved in the memory
+  arrayRandom=[];// set the global variable to empty array, it will clear it out the saved criteria the user has already used the Password generator
 
   var input = prompt("How many characters would you like to be?\n Between 8 to 128 character ");
   if (input >=8 && input <=128) {
@@ -65,6 +64,8 @@ function userInput() {
     symbol = confirm("Would you like to add a SYMBOL in your password?");
     console.log(symbol);
   }
+  checkAllOptions ()// create a new function to check if the user will add all the option as false
+  createRandomChar (); // it calls the function to generate the password, adding the user choices
 }
 
 // --------------------------------------------------------Logic to generate the password ---------------------------------------------------------------------
@@ -151,5 +152,23 @@ function createRandomChar () {
 function generatePassword(){
   return array.join('');
 }
+
+function checkAllOptions (){// create a new function to check if the user will add all the option as false
+  if (number === false &&
+    upperCase === false &&
+    lowerCase === false &&
+    symbol=== false) {
+      alert("Hey, it seems that you did not select any criteria to generate your password!");
+      var option = confirm("Press ok to start over or \ncancel, to leave the application!");
+      if (confirm === true) { // user press ok, it set the confirm to true, and the user will be able to start all over
+        userInput();
+      } else if (confirm === false) { // it will return to the main page
+        return;
+      }
+
+    }
+
+}
+
 
 
