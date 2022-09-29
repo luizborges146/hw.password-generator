@@ -20,10 +20,20 @@ var lowerCase = false;
 var symbol = false;
 
 var passSize = 0;
+
+var lowerCaseLetters = "abcdefghijklmnopqrstuvwxyz";
+var upperCaseLetters ="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var symChar = " !#$%&'()*+,-.:;<=>?@[]^_`\{|}~/";
+
+var aux = 0; //
+var array = [];
+var arrayRandom=[];//to set the numbers that can be used in the switch
+
+
 // --------------------------------------------------------get user information  ---------------------------------------------------------------------
 function userInput() {
  
-  array = [];// set the global variable to empty array, to reset password info saved in the memory
+  array = [];// set the global variable to empty array, to reset password info saved in the memory, in case the user wants to do it again
   arrayRandom=[];// set the global variable to empty array, it will clear it out the saved criteria the user has already used the Password generator
 
   var input = prompt("How many characters would you like to be?\n Between 8 to 128 character ");
@@ -69,15 +79,6 @@ function userInput() {
 }
 
 // --------------------------------------------------------Logic to generate the password ---------------------------------------------------------------------
-
-var lowerCaseLetters = "abcdefghijklmnopqrstuvwxyz";
-var upperCaseLetters ="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var symChar = " !#$%&'()*+,-.:;<=>?@[]^_`\{|}~/";
-
-var aux = 0; //
-var array = [];
-var arrayRandom=[];//to set the numbers that can be used in the switch
-
 
 
 function createRandomChar () {
