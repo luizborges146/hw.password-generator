@@ -7,7 +7,6 @@ function writePassword() {
   createRandomChar (); // it calls the function to generate the password, adding the user choices
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
   passwordText.value = password;
 
 }
@@ -17,13 +16,17 @@ generateBtn.addEventListener("click", writePassword);
 
 // --------------------------------------------------------Global Variables ---------------------------------------------------------------------
 var number = false;
-var upperCase = true;
+var upperCase = false;
 var lowerCase = false;
 var symbol = false;
 
 var passSize = 0;
 // --------------------------------------------------------get user information  ---------------------------------------------------------------------
 function userInput() {
+ 
+  array = [];// create a local variable to fix the issue related to the password info be saved in the memory
+  arrayRandom=[];// create a local variable to clear it out the password, in case the user wants to try one more time
+
   var input = prompt("How many characters would you like to be?\n Between 8 to 128 character ");
   if (input >=8 && input <=128) {
     passSize = input;
