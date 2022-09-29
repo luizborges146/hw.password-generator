@@ -23,19 +23,20 @@ var symbol = false;
 var passSize = 0;
 // --------------------------------------------------------get user information  ---------------------------------------------------------------------
 function userInput() {
-  var passwordSize = prompt("Please enter a number between 8 - 128", "8");
-  if (passwordSize >=8 && passwordSize <=128) {
+  var input = prompt("How many characters would you like to be?\n Between 8 to 128 character ");
+  if (input >=8 && input <=128) {
     passSize = passwordSize;
     promptNumber();
-  } else if(passwordSize < 8) {
+  } else if (input === null){
+    return;
+  } else if(input > 128) {
+    alert("You added a number that is bigger than 128.\n Please add a number between 8 - 128!");
+    userInput();
+  }  else if(input < 8) {
     alert("You added a number that is lower than 8.\n Please add a number between 8 - 128!");
     userInput();
-  } else if(passwordSize > 128) {
-    alert(("You added a number that is bigger than 128.\n Please add a number between 8 - 128!"));
-    userInput();
-  } else{
-    alert(("You did not add a number.\n Please add a number between 8 - 128!"));
-    userInput();
+  } else {
+    alert("You did not add a number.\n Please add a number between 8 - 128!");
   }
 // ------------------------------------------------Check what type of password the user would like to have -----------------------------------------------
   function promptNumber() {
@@ -60,8 +61,6 @@ function userInput() {
     console.log(symbol);
     //checkTrueOrFalse();
   }
-
-
 }
 
 // --------------------------------------------------------Logic to generate the password ---------------------------------------------------------------------
@@ -141,7 +140,6 @@ function createRandomChar () {
         break;
     }
   }
-
 }
 
 
